@@ -10,6 +10,7 @@ namespace MobileOperation.Models
     public class MOContext : IdentityDbContext<User>
     {
         public DbSet<Flow> Flows { get; set; }
+
         public DbSet<FlowExecutor> FlowExecutors { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
