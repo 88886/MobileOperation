@@ -4,18 +4,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Data.Entity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using CodeComb.AspNet.Upload.Models;
 
 namespace MobileOperation.Models
 {
-    public class MOContext : IdentityDbContext<User>
+    public class MOContext : IdentityDbContext<User>, IFileUploadDbContext
     {
         public DbSet<Flow> Flows { get; set; }
 
         public DbSet<FlowExecutor> FlowExecutors { get; set; }
 
+        public DbSet<File> Files { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder.SetupBlob();
 
             builder.Entity<User>(e =>
             {
