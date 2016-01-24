@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C4896C2B-68AD-4B9F-9108-988394CFC35E}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		NuGet.config = NuGet.config
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MobileOperation", "src\MobileOperation\MobileOperation.xproj", "{702D9FB2-2093-4E66-BF2D-BCB065A86315}"
